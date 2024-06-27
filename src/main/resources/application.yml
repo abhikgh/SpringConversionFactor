@@ -1,0 +1,19 @@
+server:
+  port: 8062
+   
+spring: 
+  application:
+    name: conversion-factor
+            
+cloud:
+  config:
+    discovery:
+      enabled: true 
+      service-id: config-server            
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}  
+    region: default
+    registryFetchIntervalSeconds: 5
