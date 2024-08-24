@@ -1,20 +1,10 @@
 server:
-  port: 8061
+  port: 8062
    
 spring: 
   application:
     name: conversion-factor
-  cloud:
-    gateway:
-      routes:
-        - id: baeldung_route
-          uri: http://baeldung.com
-          predicates:
-            - Path=/baeldung/
-        - id: test_route
-          uri: http://baeldung.com
-          predicates:
-            - Path=/test/
+
 
 management:
   endpoints:
