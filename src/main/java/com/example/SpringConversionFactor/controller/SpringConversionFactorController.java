@@ -42,6 +42,7 @@ public class SpringConversionFactorController {
 	@GetMapping(value="/getConversionFactor/{countryCode}",produces="application/json")
 	public ResponseEntity<CurrencyConversion> getConversionFactor(@PathVariable String countryCode){
 		log.info("in getConversionFactor ... " + countryCode);
+		System.out.println("aaaaaaaaaaaaaaaaaaaaa");
 		CurrencyConversion currencyConversion = CurrencyConversionUtil.getCurrencyFromCountryCode(countryCode);
 		log.info("currencyConversion :: " + currencyConversion.getConversionFactor());
 		return ResponseEntity.status(HttpStatus.OK)
